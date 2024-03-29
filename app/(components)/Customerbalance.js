@@ -11,7 +11,26 @@ export default function Customerbalance() {
 
   useEffect(() => {
     fetchData();
+    fetchtestapi();
   }, []);
+
+  const fetchtestapi = async () => {
+    try {
+      const response = await fetch("/api/test", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: "Hello from the client!" }),
+      });
+      const data = await response.json();
+      console.log(data);
+    }
+    catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
 
   const fetchData = async () => {
     try {

@@ -1,6 +1,6 @@
-import Secretsauce from "./_components/secretsauce";
-import Customerbalance from "./_components/Customerbalance";
-import Transferlist from "./_components/Transferlist";
+import Secretsauce from "./(components)/Secretsauce";
+import Customerbalance from "./(components)/Customerbalance";
+import Transferlist from "./(components)/Transferlist";
 
 export default function Home() {
   return (
